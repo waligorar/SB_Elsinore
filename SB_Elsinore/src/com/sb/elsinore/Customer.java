@@ -1,5 +1,7 @@
 package com.sb.elsinore;
 
+import java.util.ArrayList;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -10,8 +12,17 @@ public class Customer {
     String name;
     int age;
     int id;
+    ArrayList<Employee> emps;
 
-    public String getName() {
+	public ArrayList<Employee> getEmps() {
+		return emps;
+	}
+
+	public void setEmps(ArrayList<Employee> emps) {
+		this.emps = emps;
+	}
+
+	public String getName() {
         return name;
     }
 

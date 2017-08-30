@@ -11,11 +11,11 @@ import org.nanohttpd.protocols.http.IHTTPSession;
 import org.nanohttpd.protocols.http.NanoHTTPD;
 import org.nanohttpd.protocols.http.response.Response;
 
-import com.sb.recipe.Recipe;
+import com.sb.recipe.RecipeList;
 import com.sb.ui.HtmlBuilder;
 
 public class BrewServer extends NanoHTTPD {
-    private Recipe recipe = new Recipe();
+    private RecipeList recipes = new RecipeList();
     private HtmlBuilder hb = new HtmlBuilder();
 
     private static ArrayList<String> recipeList;
@@ -47,7 +47,7 @@ public class BrewServer extends NanoHTTPD {
 			if (parms.get("recipe") != null) {
 				hb.setsRecipe(parms.get("recipe"));
 			}
-			msg = hb.Execute(parms.get("submit"), recipe.GetRecipeList());
+			msg = hb.Execute(parms.get("submit"), recipes.GetRecipeList());
 		}
 		
 		Response resp = Response.newFixedLengthResponse(msg);
