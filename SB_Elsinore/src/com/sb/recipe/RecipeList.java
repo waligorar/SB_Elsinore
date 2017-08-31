@@ -20,23 +20,13 @@ public class RecipeList {
 
 	private static Log log = LogFactory.getLog(RecipeList.class);
 
-	public RecipeList() {
-		log.debug("init() Start");
-		log.debug("init() End");
-	}
-	
-	public RecipeList(Recipe r) {
-		log.debug("init(Recipe) Start");
-		log.debug("init(Recipe) End");
-	}
-	
 	public ArrayList<String> GetRecipeList() {
 		log.debug("GetRecipeList(): Begin");
-		
+
 		File folder = new File(sRecipeFolder);
 		File[] listOfFiles = folder.listFiles();
 		ArrayList<String> recipes = new ArrayList<String>();
-		
+
 		for (File file : listOfFiles) {
 			if (file.isFile()) {
 				int i = 1;
@@ -47,10 +37,5 @@ public class RecipeList {
 
 		log.debug("GetRecipeList(): End");
 		return recipes;
-	}
-	
-	public void load() {
-		log.debug("load(): Begin");
-		log.debug("load(): End");
 	}
 }

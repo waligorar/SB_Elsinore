@@ -2,7 +2,6 @@ package com.sb.elsinore;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.logging.Log;
@@ -17,8 +16,6 @@ import com.sb.ui.HtmlBuilder;
 public class BrewServer extends NanoHTTPD {
     private RecipeList recipes = new RecipeList();
     private HtmlBuilder hb = new HtmlBuilder();
-
-    private static ArrayList<String> recipeList;
 
     private static Log log = LogFactory.getLog(BrewServer.class);
 
