@@ -3,11 +3,6 @@ package com.sb.recipe;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import java.util.ArrayList;
-
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
-
 @XmlRootElement(name = "RECIPE")
 public class Recipe {
 	private String Name = null;
