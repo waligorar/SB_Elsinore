@@ -14,6 +14,9 @@ import javax.xml.bind.Marshaller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.sb.recipe.Fermentables;
+import com.sb.recipe.Fermentable;
+import com.sb.recipe.Hops;
 import com.sb.recipe.Hop;
 import com.sb.recipe.Recipe;
 import com.sb.recipe.Recipes;
@@ -39,66 +42,36 @@ public class LaunchControl {
 			
 			Recipes recipes = new Recipes();
 
-//			Employee emp1 = new Employee();
-//			emp1.setName("John Roberts");
-//			emp1.setNumber(123456);
-//			Employee emp2 = new Employee();
-//			emp2.setName("Jackie Roberts");
-//			emp2.setNumber(658425);
-//			
-//			ArrayList<Employee> emps = new ArrayList<Employee>();
-//			emps.add(emp1);
-//			emps.add(emp2);
-//			
-//			Customer custOut = new Customer();
-//			custOut.setId(101);
-//			custOut.setAge(19);
-//			custOut.setName("janet");
-//			custOut.setEmps(emps);
-//			
-//			File fileIn = new File("recipes/barrel-aged-stout.xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(Recipes.class);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			recipes = (Recipes) jaxbUnmarshaller.unmarshal(new File("recipes/bas.xml"));
-//			File fileOut = new File("recipes/customerOut.xml");
-//			JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-//			
-//			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-//			
-//			jaxbMarshaller.marshal(recipes,  fileOut);
-//			jaxbMarshaller.marshal(recipes,  System.out);
-//			jaxbMarshaller.marshal(custOut,  fileOut);
-//			jaxbMarshaller.marshal(custOut,  System.out);
-//
-//			log.debug("main(): End mashal");
-//
-//			log.debug("main(): Begin unmashal");
-//			jaxbContext = JAXBContext.newInstance(Customer.class);
-//			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-//			Customer customer = (Customer) jaxbUnmarshaller.unmarshal(new File("recipes/customerOut.xml"));
-//			log.debug("main(): customer.Name = " + customer.getName());
-//			log.debug("main(): customer.Age = " + customer.getAge());
-//			log.debug("main(): customer.ID = " + customer.getId());
-//			
-//			ArrayList<Employee> emps2 = customer.getEmps();
-//
-//			for (Employee thisEmp: emps2) {
-//				log.debug("main(): currentEmp.Name = " + thisEmp.getName());
-//				log.debug("main(): currentEmp.Number = " + thisEmp.getNumber());
-//			}
 			
-			ArrayList<Recipe> recipeList = recipes.getRecipe();
+			ArrayList<Recipe> recipeList = recipes.getRecipes();
 			log.debug("Recipe count=" + recipeList.size());
 			for (Recipe iRecipe: recipeList) {
+				log.debug("Recipe forced=" + iRecipe.getForcedCarbonation());
 				jaxbMarshaller.marshal(iRecipe,  System.out);
 				System.out.println("\n");
 
-				ArrayList<Hop> hopList = iRecipe.getHops();
-				log.debug("Hop count=" + hopList.size());
-				for (Hop iHop: hopList) {
-					jaxbMarshaller.marshal(iHop,  System.out);					
-					System.out.println("\n");
+				Hops hops = iRecipe.getHops();
+				if (hops != null) {
+					ArrayList<Hop> hopList = hops.getHops();
+					log.debug("Hop count=" + hopList.size());
+					for (Hop iHop: hopList) {
+						jaxbMarshaller.marshal(iHop,  System.out);					
+						System.out.println("\n");
+					}
+				}
+
+				Fermentables fermentables = iRecipe.getFermentables();
+				if (fermentables != null) {
+					ArrayList<Fermentable> fermentableList = fermentables.getFermentables();
+					log.debug("Fermentable count=" + fermentableList.size());
+					for (Fermentable iFermentable: fermentableList) {
+						jaxbMarshaller.marshal(iFermentable,  System.out);					
+						System.out.println("\n");
+					}
 				}
 			}
 			

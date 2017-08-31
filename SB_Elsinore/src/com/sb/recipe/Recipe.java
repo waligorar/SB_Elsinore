@@ -34,7 +34,7 @@ public class Recipe {
 	private float Age = 0.0f;
 	private float AgeTemp = 0.0f;
 	private String CarbonationUsed = null;
-	private boolean ForcedCarbonation = false;
+	private String ForcedCarbonation = null;
 	private String PrimingSugarName = null;
 	private float PrimingSugarEquiv = 0.0f;
 	private float KegPrimingFactor = 0.0f;
@@ -58,7 +58,8 @@ public class Recipe {
 	private String DisplaySecondaryTemp = null;
 	private String DisplayTertiaryTemp = null;
 	private String DisplayAgeTemp = null;
-	private ArrayList<Hop> Hops = new ArrayList<Hop>(); 
+	private Hops hops = null; 
+	private Fermentables fermentables = null; 
 	
 	public String getName() {
 		return Name;
@@ -276,12 +277,12 @@ public class Recipe {
 		CarbonationUsed = carbonationUsed;
 	}
 
-	public boolean isForcedCarbonation() {
+	public String getForcedCarbonation() {
 		return ForcedCarbonation;
 	}
 
 	@XmlElement(name="FORCED_CARBONATION")
-	public void setForcedCarbonation(boolean forcedCarbonation) {
+	public void setForcedCarbonation(String forcedCarbonation) {
 		ForcedCarbonation = forcedCarbonation;
 	}
 
@@ -492,12 +493,22 @@ public class Recipe {
 		DisplayAgeTemp = displayAgeTemp;
 	}
 
-	public ArrayList<Hop> getHops() {
-		return Hops;
+	public Hops getHops() {
+		return hops;
 	}
 
-    @XmlElement(name="HOP")
-	public void setHops(ArrayList<Hop> hops) {
-		this.Hops = hops;
+	@XmlElement(name="HOPS")
+	public void setHops(Hops hops) {
+		this.hops = hops;
 	}
+
+	public Fermentables getFermentables() {
+		return fermentables;
+	}
+
+	@XmlElement(name="FERMENTABLES")
+	public void setFermentables(Fermentables fermentables) {
+		this.fermentables = fermentables;
+	}
+
 }
