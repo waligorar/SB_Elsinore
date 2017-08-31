@@ -14,6 +14,13 @@ import javax.xml.bind.Marshaller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.sb.recipe.MashStep;
+import com.sb.recipe.MashSteps;
+import com.sb.recipe.Mash;
+import com.sb.recipe.Equipment;
+import com.sb.recipe.Style;
+import com.sb.recipe.Yeasts;
+import com.sb.recipe.Yeast;
 import com.sb.recipe.Fermentables;
 import com.sb.recipe.Fermentable;
 import com.sb.recipe.Hops;
@@ -72,6 +79,51 @@ public class LaunchControl {
 						jaxbMarshaller.marshal(iFermentable,  System.out);					
 						System.out.println("\n");
 					}
+				}
+
+				Yeasts yeasts = iRecipe.getYeasts();
+				if (yeasts != null) {
+					ArrayList<Yeast> yeastList = yeasts.getYeasts();
+					log.debug("Yeast count=" + yeastList.size());
+					for (Yeast iYeast: yeastList) {
+						jaxbMarshaller.marshal(iYeast,  System.out);					
+						System.out.println("\n");
+					}
+				}
+
+				Style style = iRecipe.getStyle();
+				if (style != null) {
+					log.debug("Style Begin");
+					jaxbMarshaller.marshal(style,  System.out);					
+					System.out.println("\n");
+					log.debug("Style End");
+				}
+
+				Equipment equipment = iRecipe.getEquipment();
+				if (equipment != null) {
+					log.debug("Equipment Begin");
+					jaxbMarshaller.marshal(equipment,  System.out);					
+					System.out.println("\n");
+					log.debug("Equipment End");
+				}
+
+				Mash mash = iRecipe.getMash();
+				if (mash != null) {
+					log.debug("Mash Begin");
+					jaxbMarshaller.marshal(mash,  System.out);					
+					System.out.println("\n");
+
+					MashSteps mashSteps = mash.getMashSteps();
+					if (mashSteps != null) {
+						ArrayList<MashStep> mashStepList = mashSteps.getMashSteps();
+						log.debug("MashStep count=" + mashStepList.size());
+						for (MashStep iMashStep: mashStepList) {
+							jaxbMarshaller.marshal(iMashStep,  System.out);					
+							System.out.println("\n");
+						}
+					}
+
+					log.debug("Mash End");
 				}
 			}
 			

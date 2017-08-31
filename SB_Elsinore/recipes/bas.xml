@@ -239,6 +239,141 @@ Use for: Coloring in small amounts, or flavoring of Stouts and Porters in larger
  <EXTRACT_SUBSTITUTE></EXTRACT_SUBSTITUTE>
 </FERMENTABLE>
 </FERMENTABLES>
+ 
+ 
+ <YEASTS>
+<YEAST>
+ <NAME>SafAle English Ale</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Ale</TYPE>
+ <FORM>Dry</FORM>
+ <AMOUNT>0.0236590</AMOUNT>
+ <AMOUNT_IS_WEIGHT>FALSE</AMOUNT_IS_WEIGHT>
+ <LABORATORY>DCL/Fermentis</LABORATORY>
+ <PRODUCT_ID>S-04</PRODUCT_ID>
+ <MIN_TEMPERATURE>15.0000000</MIN_TEMPERATURE>
+ <MAX_TEMPERATURE>24.0000000</MAX_TEMPERATURE>
+ <FLOCCULATION>Medium</FLOCCULATION>
+ <ATTENUATION>73.0000000</ATTENUATION>
+ <NOTES>Fast starting, fast fermenting yeast.  Quick attenuation helps to produce a clean, crisp, clear ale.  Can be used in a wide range of ales.</NOTES>
+ <BEST_FOR>Great general purpose ale yeast.</BEST_FOR>
+ <MAX_REUSE>5</MAX_REUSE>
+ <TIMES_CULTURED>0</TIMES_CULTURED>
+ <ADD_TO_SECONDARY>TRUE</ADD_TO_SECONDARY>
+ <DISPLAY_AMOUNT>23.66 ml</DISPLAY_AMOUNT>
+ <DISP_MIN_TEMP>59.0 F</DISP_MIN_TEMP>
+ <DISP_MAX_TEMP>75.2 F</DISP_MAX_TEMP>
+ <INVENTORY>0.0 pkg</INVENTORY>
+ <CULTURE_DATE>14 Jun 2003</CULTURE_DATE>
+</YEAST>
+</YEASTS>
+ 
+ 
+ <STYLE>
+ <NAME>American Stout</NAME>
+ <VERSION>1</VERSION>
+ <CATEGORY>Stout</CATEGORY>
+ <CATEGORY_NUMBER>13</CATEGORY_NUMBER>
+ <STYLE_LETTER>E</STYLE_LETTER>
+ <STYLE_GUIDE>BJCP 2008</STYLE_GUIDE>
+ <TYPE>Ale</TYPE>
+ <OG_MIN>1.0500000</OG_MIN>
+ <OG_MAX>1.0750000</OG_MAX>
+ <FG_MIN>1.0100000</FG_MIN>
+ <FG_MAX>1.0220000</FG_MAX>
+ <IBU_MIN>35.0000000</IBU_MIN>
+ <IBU_MAX>75.0000000</IBU_MAX>
+ <COLOR_MIN>30.0000000</COLOR_MIN>
+ <COLOR_MAX>40.0000000</COLOR_MAX>
+ <CARB_MIN>2.3000000</CARB_MIN>
+ <CARB_MAX>2.9000000</CARB_MAX>
+ <ABV_MAX>7.0000000</ABV_MAX>
+ <ABV_MIN>5.0000000</ABV_MIN>
+ <NOTES>A hoppy, bitter, strongly roasted Foreignstyle Stout (of the export variety). Breweries express individuality through varying the roasted malt profile, malt sweetness and flavor, and the amount of finishing hops used. Generally has bolder roasted malt flavors and hopping than other traditional stouts (except Imperial Stouts).</NOTES>
+ <PROFILE>Aroma: Moderate to strong aroma of roasted malts, often having a roasted coffee or dark chocolate quality. Burnt or charcoal aromas are low to none. Medium to very low hop aroma, often with a citrusy or resiny American hop character. Esters are optional, but can be present up to medium intensity. Light alcohol-derived aromatics are also optional. No diacetyl.
+Appearance: Generally a jet black color, although some may appear very dark brown. Large, persistent head of light tan to light brown in color. Usually opaque.
+Flavor: Moderate to very high roasted malt flavors, often tasting of coffee, roasted coffee beans, dark or bittersweet chocolate. May have a slightly burnt coffee ground flavor, but this character should not be prominent if present. Low to medium malt sweetness, often with rich chocolate or caramel flavors. Medium to high bitterness. Hop flavor can be low to high, and generally reflects citrusy or resiny American varieties. Light esters may be present but are not required. Medium to dry finish, occasionally with a light burnt quality. Alcohol flavors can be present up to medium levels, but smooth. No diacetyl.
+Mouthfeel: Medium to full body. Can be somewhat creamy, particularly if a small amount of oats have been used to enhance mouthfeel. Can have a bit of roast-derived astringency, but this character should not be excessive. Medium-high to high carbonation. Light to moderately strong alcohol warmth, but smooth and not excessively hot.</PROFILE>
+ <INGREDIENTS>Common American base malts and yeast.  Varied use of dark and roasted malts, as well as caramel-type malts.  Adjuncts such as oatmeal may be present in low quantities.  American hop varieties.</INGREDIENTS>
+ <EXAMPLES>Rogue Shakespeare Stout, Deschutes Obsidian Stout, Sierra Nevada Stout, North Coast Old No. 38, Bar Harbor Cadillac Mountain Stout, Avery Out of Bounds Stout, Lost Coast 8 Ball Stout, Mad River Steelhead Extra Stout</EXAMPLES>
+ <DISPLAY_OG_MIN>1.050 SG</DISPLAY_OG_MIN>
+ <DISPLAY_OG_MAX>1.075 SG</DISPLAY_OG_MAX>
+ <DISPLAY_FG_MIN>1.010 SG</DISPLAY_FG_MIN>
+ <DISPLAY_FG_MAX>1.022 SG</DISPLAY_FG_MAX>
+ <DISPLAY_COLOR_MIN>30.0 SRM</DISPLAY_COLOR_MIN>
+ <DISPLAY_COLOR_MAX>40.0 SRM</DISPLAY_COLOR_MAX>
+ <OG_RANGE>1.050-1.075 SG</OG_RANGE>
+ <FG_RANGE>1.010-1.022 SG</FG_RANGE>
+ <IBU_RANGE>35.0-75.0 IBUs</IBU_RANGE>
+ <CARB_RANGE>2.30-2.90 Vols</CARB_RANGE>
+ <COLOR_RANGE>30.0-40.0 SRM</COLOR_RANGE>
+ <ABV_RANGE>5.00-7.00 %</ABV_RANGE>
+</STYLE>
+ 
+ <EQUIPMENT>
+ <NAME>My KEG&#39;s 11 gallons</NAME>
+ <VERSION>1</VERSION>
+ <BOIL_SIZE>54.1317005</BOIL_SIZE>
+ <BATCH_SIZE>45.4252032</BATCH_SIZE>
+ <TUN_VOLUME>56.7815040</TUN_VOLUME>
+ <TUN_WEIGHT>9.0718400</TUN_WEIGHT>
+ <TUN_SPECIFIC_HEAT>0.1200000</TUN_SPECIFIC_HEAT>
+ <TOP_UP_WATER>0.0000000</TOP_UP_WATER>
+ <TRUB_CHILLER_LOSS>1.8927168</TRUB_CHILLER_LOSS>
+ <EVAP_RATE>9.0909091</EVAP_RATE>
+ <BOIL_TIME>60.0000000</BOIL_TIME>
+ <CALC_BOIL_VOLUME>TRUE</CALC_BOIL_VOLUME>
+ <LAUTER_DEADSPACE>1.8927168</LAUTER_DEADSPACE>
+ <TOP_UP_KETTLE>0.0000000</TOP_UP_KETTLE>
+ <HOP_UTILIZATION>100.0000000</HOP_UTILIZATION>
+ <COOLING_LOSS_PCT>4.0000000</COOLING_LOSS_PCT>
+ <NOTES>My three keg setup Converted keg mash-tun with copper ring, insulated with a yoga mat. </NOTES>
+ <DISPLAY_BOIL_SIZE>14.30 gal</DISPLAY_BOIL_SIZE>
+ <DISPLAY_BATCH_SIZE>12.00 gal</DISPLAY_BATCH_SIZE>
+ <DISPLAY_TUN_VOLUME>15.00 gal</DISPLAY_TUN_VOLUME>
+ <DISPLAY_TUN_WEIGHT>20 lbs</DISPLAY_TUN_WEIGHT>
+ <DISPLAY_TOP_UP_WATER>0.00 gal</DISPLAY_TOP_UP_WATER>
+ <DISPLAY_TRUB_CHILLER_LOSS>0.50 gal</DISPLAY_TRUB_CHILLER_LOSS>
+ <DISPLAY_LAUTER_DEADSPACE>0.50 gal</DISPLAY_LAUTER_DEADSPACE>
+ <DISPLAY_TOP_UP_KETTLE>0.00 gal</DISPLAY_TOP_UP_KETTLE>
+</EQUIPMENT>
+
+  <MASH>
+ <NAME>My Mash pw 1.5</NAME>
+ <VERSION>1</VERSION>
+ <GRAIN_TEMP>22.2222222</GRAIN_TEMP>
+ <TUN_TEMP>22.2222222</TUN_TEMP>
+ <SPARGE_TEMP>75.5555556</SPARGE_TEMP>
+ <PH>5.2000000</PH>
+ <TUN_WEIGHT>320.0000000</TUN_WEIGHT>
+ <TUN_SPECIFIC_HEAT>0.1200000</TUN_SPECIFIC_HEAT>
+ <EQUIP_ADJUST>TRUE</EQUIP_ADJUST>
+ <NOTES></NOTES>
+ <DISPLAY_GRAIN_TEMP>72.0 F</DISPLAY_GRAIN_TEMP>
+ <DISPLAY_TUN_TEMP>72.0 F</DISPLAY_TUN_TEMP>
+ <DISPLAY_SPARGE_TEMP>168.0 F</DISPLAY_SPARGE_TEMP>
+ <DISPLAY_TUN_WEIGHT>20 lbs</DISPLAY_TUN_WEIGHT>
+<MASH_STEPS>
+<MASH_STEP>
+ <NAME>Mash Step pw</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Infusion</TYPE>
+ <INFUSE_AMOUNT>43.8708095</INFUSE_AMOUNT>
+ <STEP_TIME>40.0000000</STEP_TIME>
+ <STEP_TEMP>67.7777778</STEP_TEMP>
+ <RAMP_TIME>4.0000000</RAMP_TIME>
+ <END_TEMP>67.7777778</END_TEMP>
+ <DESCRIPTION>Add 12.09 gal of water at 165.5 F</DESCRIPTION>
+ <WATER_GRAIN_RATIO>1.500 qt/lb</WATER_GRAIN_RATIO>
+ <DECOCTION_AMT>0.00 gal</DECOCTION_AMT>
+ <INFUSE_TEMP>165.5 F</INFUSE_TEMP>
+ <DISPLAY_STEP_TEMP>154.0 F</DISPLAY_STEP_TEMP>
+ <DISPLAY_INFUSE_AMT>12.09 gal</DISPLAY_INFUSE_AMT>
+</MASH_STEP>
+</MASH_STEPS>
+
+</MASH>
+ 
  <NOTES></NOTES>
  <TASTE_NOTES></TASTE_NOTES>
  <TASTE_RATING>30.0000000</TASTE_RATING>

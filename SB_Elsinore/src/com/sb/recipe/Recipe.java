@@ -60,6 +60,10 @@ public class Recipe {
 	private String DisplayAgeTemp = null;
 	private Hops hops = null; 
 	private Fermentables fermentables = null; 
+	private Yeasts yeasts = null;
+	private Style style = null;
+	private Equipment equipment = null;
+	private Mash mash = null;
 	
 	public String getName() {
 		return Name;
@@ -509,6 +513,42 @@ public class Recipe {
 	@XmlElement(name="FERMENTABLES")
 	public void setFermentables(Fermentables fermentables) {
 		this.fermentables = fermentables;
+	}
+
+	public Yeasts getYeasts() {
+		return yeasts;
+	}
+
+	@XmlElement(name="YEASTS")
+	public void setYeasts(Yeasts yeasts) {
+		this.yeasts = yeasts;
+	}
+
+	public Style getStyle() {
+		return style;
+	}
+
+	@XmlElement(name="STYLE")
+	public void setStyle(Style style) {
+		this.style = style;
+	}
+
+	public Equipment getEquipment() {
+		return equipment;
+	}
+
+	@XmlElement(name="EQUIPMENT")
+	public void setEquipment(Equipment equipment) {
+		this.equipment = equipment;
+	}
+
+	public Mash getMash() {
+		return mash;
+	}
+
+	@XmlElement(name="MASH")
+	public void setMash(Mash mash) {
+		this.mash = mash;
 	}
 
 }
